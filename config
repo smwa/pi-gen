@@ -1,0 +1,4 @@
+IMG_NAME=Sanctuary
+DEPLOY_ZIP=1
+ENABLE_SSH=0
+STAGE_LIST="stage0 stage1 stage2 stage3"
