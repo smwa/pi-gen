@@ -1,0 +1,3 @@
+[submodule "stage3/02-install-sanctuary/files/sanctuary"]
+	path = stage3/02-install-sanctuary/files/sanctuary
+	url = git@github.com:smwa/sanctuary.git
