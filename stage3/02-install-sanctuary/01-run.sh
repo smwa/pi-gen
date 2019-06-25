@@ -3,6 +3,6 @@
 cp -r files/sanctuary "${ROOTFS_DIR}/root/"
 
 on_chroot <<EOF
-pip install --upgrade pip
-pip install -r "${ROOTFS_DIR}/root/sanctuary/requirements.txt"
+python3 -m pip install --user --upgrade pip
+python3 -m pip install --user -r "/root/sanctuary/requirements.txt"
 EOF
