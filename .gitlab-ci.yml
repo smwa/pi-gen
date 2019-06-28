@@ -1,3 +1,7 @@
+image:
+  name: domofactor/dind-jessie:latest
+  entrypoint: ["/bin/sh", "-c"]
+
 build-image:
   stage: build
   script:
