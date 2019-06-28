@@ -1,0 +1,10 @@
+build-image:
+  stage: build
+  script:
+    - apt-get update
+    - apt-get install coreutils quilt parted qemu-user-static debootstrap zerofree zip dosfstools bsdtar libcap2-bin grep rsync xz-utils file git curl
+    - ./build.sh
+  artifacts:
+    paths:
+      - deploy/*
+    expire_in: 1 week
