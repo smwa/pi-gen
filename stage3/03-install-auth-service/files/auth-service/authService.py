@@ -24,9 +24,10 @@ def saveAllowList(data):
 @app.route('/')
 def check():
     allowList = loadAllowList()
-    if request.headers.get("X-Forwarded-For", request.remote_addr) not in allowList:
+    ip = request.headers.get("X-Forwarded-For", request.remote_addr)
+    if ip not in allowList:
         return "", 403
-    lastAccessed = allowList[request.remote_addr]
+    lastAccessed = allowList[ip]
     if lastAccessed > time() or lastAccessed < time() - ALLOW_TIME_IN_SECONDS:
         return "", 403
     return "", 401
