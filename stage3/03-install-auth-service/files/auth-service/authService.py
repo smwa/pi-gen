@@ -4,7 +4,7 @@ import json
 from flask import Flask
 from flask import request
 
-ALLOW_TIME_IN_SECONDS = 3600
+ALLOW_TIME_IN_SECONDS = 60
 
 app = Flask(__name__)
 
